@@ -1,0 +1,166 @@
+body {
+    background: linear-gradient(90deg, #c3148e, #9dd4e4);
+  }
+ 
+  .medical-records {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .record-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .record-card p {
+    margin: 5px 0;
+  }
+  
+  .ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+  .ag-courses_box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  
+  .ag-courses_item {
+    flex-basis: calc(50% - 30px);
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 28px;
+  }
+  
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #121212;
+    position: relative;
+  }
+  
+  .ag-courses-item_link:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .ag-courses-item_title {
+    min-height: 50px; /* Adjusted for title height */
+    font-weight: bold;
+    font-size: 24px; /* Adjusted font size */
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all .5s ease;
+  }
+  
+  /* Additional color styles for backgrounds */
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #3ecd5e;
+  }
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #e44002;
+  }
+  
+  /* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.login-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: right;
+  margin-bottom: auto;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+.close-btn:hover {
+  background: #c82333;
+}
+
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      flex-basis: calc(50% - 30px);
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  }
+  
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      flex-basis: 100%;
+    }
+  }
+  

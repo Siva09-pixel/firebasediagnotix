@@ -1,0 +1,76 @@
+/* Medical Info Styling */
+.medical_container {
+  width: 100%; /* Make the container take full width */
+  max-width: 800px; /* Set a new max width for larger screens */
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.medical_heading {
+  color: #000000;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.input_group {
+  width: 100%;
+  margin: 10px 0;
+  text-align: left; 
+}
+
+label {
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+input::placeholder {
+  color: #aaa; 
+  opacity: 1; 
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .medical_container {
+    width: 90%;
+  }
+}

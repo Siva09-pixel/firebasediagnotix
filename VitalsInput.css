@@ -1,0 +1,72 @@
+.vitals-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* Increased width to fit cards side by side */
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.vitals_cards-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  width: 100%;
+}
+
+/* Ensure cards have proper size */
+.card {
+  width: 350px; /* Adjusted width */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  flex: 1; /* Allows equal distribution */
+  min-width: 300px; /* Prevents cards from becoming too small */
+}
+
+.vital_heading{
+  color: #222;
+  font-weight: bold;
+  
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Manual Entry Card */
+.manual-entry {
+  background: #ffffff;
+  border: 2px solid #007bff;
+}
+
+/* Portable Testing Kit Card */
+.testing-kit {
+  background: rgba(219, 19, 19, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  background: linear-gradient(135deg, #0e3258, #000000);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .vitals-container {
+    max-width: 90%; /* Makes container flexible for small screens */
+  }
+
+  .vitals_cards-container {
+    flex-direction: column; /* Stack cards on small screens */
+  }
+}

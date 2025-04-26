@@ -1,0 +1,234 @@
+/* Health Report Styling */
+.health_container {
+  width: 100%;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.summary-section {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.summary-section h3 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Responsive Grid for Reports */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Improved responsiveness */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.report-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+}
+
+.status {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status.Normal {
+  color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.status.Low {
+  color: #fd7e14;
+  background: rgba(253, 126, 20, 0.1);
+}
+
+.status.High {
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+}
+
+/* Symptoms Grid */
+.symptoms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* AI Summary Modal */
+.ai-summary-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 1000;
+  text-align: left;
+}
+
+.ai-summary-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Doctor Consultation Button */
+.consult-doctor-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.consult-doctor-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Consultation Modal */
+.consult-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.consult-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.consult-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.consult-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.consult-card:hover {
+  transform: scale(1.05);
+  background: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .health_container {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .status {
+    font-size: 16px;
+  }
+
+  .report-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .consult-doctor-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .health_container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+  .report-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .consult-doctor-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
